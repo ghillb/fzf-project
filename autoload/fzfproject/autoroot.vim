@@ -5,7 +5,7 @@ function! fzfproject#autoroot#switchroot()
 endfunction
 
 function! fzfproject#autoroot#doroot()
-  let l:root = fnamemodify(fugitive#buffer().repo()['git_dir'], ":h")
+  let l:root = fnamemodify(FugitiveGitDir(), ":h")
   if isdirectory(l:root)
     execute 'lcd ' . l:root
   endif
