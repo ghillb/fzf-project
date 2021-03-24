@@ -34,7 +34,7 @@ function! s:switchToProjectDir(projectLine)
         call feedkeys('i')
       endif
     endif
-
+  doautocmd User FzfSwitchProjectBufferEvent
   finally
     let &autochdir = autochdir
   endtry
